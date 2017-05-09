@@ -1,0 +1,89 @@
+/*
+	GalleryView Stylesheet
+	
+	Use the CSS rules below to modify the look of your gallery.
+	
+	To create additional rules, use the markup below as a guide to GalleryView's architecture.
+	
+	<div class="gallery">
+		<div class="panel">
+			<img src="path/to/image.jpg" />
+			<div class="panel-overlay">
+				...overlay content...
+			</div>
+			<div class="overlay-background"></div>
+		</div>
+		<ul class="filmstrip">
+			<li class="frame current">
+				<img src="path/to/thumbnail.jpg" />
+				<div class="caption">caption text</div>
+			</li>
+			<li class="frame">
+				<img src="path/to/thumbnail.jpg" />
+				<div class="caption">caption text</div>
+			</li>
+		</ul>
+	</div>
+*/
+
+/* GALLERY LIST */
+/* IMPORTANT - Change '#photos' to the ID of your gallery list to prevent a flash of unstyled content */
+#gallery { visibility: hidden; }
+
+/* GALLERY CONTAINER */
+.gallery { background: #000000; border: 0px; padding: 0px; border: 1px solid #663300; }
+
+/* LOADING BOX */
+.loader { background: url(loader.gif) center center no-repeat #ddd; }
+
+/* GALLERY PANELS */
+.panel {}
+
+/* DEFINE HEIGHT OF PANEL OVERLAY */
+/* NOTE - It is best to define padding here as well so overlay and background retain identical dimensions */
+.panel .panel-overlay,
+.panel .overlay-background { height: 75px; padding: 5px 1em; }
+
+/* PANEL OVERLAY BACKGROUND */
+.panel .overlay-background { background: #222; }
+
+/* PANEL OVERLAY CONTENT */
+.panel .panel-overlay { color: #ffffff; font-family: "Trebuchet MS", "Trebuchet MS Bold"; font-size: 12px; line-height:14px; text-align: left;}
+.panel .panel-overlay-h1 {color: #ffffff; font-size: 24px; font-weight:bold; line-height:32px}
+.panel .panel-overlay a:link { color: #ffcc66; font-weight:bold; font-size: 12px; line-height:14px }
+.panel .panel-overlay a:visited { color: #ffcc66; font-weight:bold; font-size: 12px; line-height:14px }
+.panel .panel-overlay a:hover { color: #ffcc66; text-decoration: underline; font-weight:bold; font-size: 12px; line-height:14px }
+.panel .panel-overlay a:active { color: #ffcc66; text-decoration: underline; font-weight:bold; font-size: 12px; line-height:14px }
+
+/* FILMSTRIP */
+/* 'margin' will define top/bottom margin in completed gallery */
+.filmstrip { margin: 5px; }
+
+/* FILMSTRIP FRAMES (contains both images and captions) */
+.frame {}
+
+/* WRAPPER FOR FILMSTRIP IMAGES */
+.frame .img_wrap { border: 1px solid #291303; }
+
+/* WRAPPER FOR CURRENT FILMSTRIP IMAGE */
+.frame.current .img_wrap { border-color: #fefef1; }
+
+/* FRAME IMAGES */
+.frame img { border: none; }
+
+/* FRAME CAPTION */
+.frame .caption { font-size: 11px; text-align: center; color: #888; }
+
+/* CURRENT FRAME CAPTION */
+.frame.current .caption { color: #000; }
+
+/* POINTER FOR CURRENT FRAME */
+.pointer {
+	border-color: #fefef1;
+}
+
+/* TRANSPARENT BORDER FIX FOR IE6 */
+/* NOTE - DO NOT CHANGE THIS RULE */
+*html .pointer {
+	filter: chroma(color=pink);
+}

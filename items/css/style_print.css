@@ -1,0 +1,63 @@
+/*-----------------------------------------主体样式*/
+body {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+body,td,th {
+	font-size: 12px;
+}
+a:link {
+	text-decoration: none;
+	color: #333333;
+}
+a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+a:hover {
+	text-decoration: underline;
+	color: #FF0000;
+}
+a:active {
+	text-decoration: none;
+	color: #FF0000;
+}
+/*-----------------------------------------其他样式*/
+.title1 {
+	font-size: 18px;
+	font-weight: bold;
+}
+.title2 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #666666;
+}
+.title3 {
+	font-weight: bold;
+	color: #666666;
+}
+.table1{
+	margin-top: 10px;
+}
+.width1{
+	width: 50px;
+}
+.width2{
+	width: 100px;
+}
+.width3{
+	width: 190px;
+}
+.bt_red {
+    color: #FFFFFF;
+	background-color: #FF0000;
+}
+@media print   
+{   
+  .Noprint {
+    DISPLAY: none;
+}   
+  .PageNext { 
+    PAGE-BREAK-AFTER: always;
+}   
+}
